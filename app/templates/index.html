@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html'%}
+{% block content %}
+
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +10,7 @@
     <title> Welcome to the best News Highlight Review website </title>
     {% endif %}
 </head>
-{% extends 'base.html'%}
+
 <body>
     <!-- general news section  -->
     <h3> General news</h3>
@@ -22,6 +23,7 @@
         <li>{{ general_news.category}}</li>
         <li>{{ general_news.language}}</li>
         <li>{{ general_news.country}}</li>
+        <li><a href="/articles/{{general_news.id}}">Read More</a></li>
         {% endfor %}
     </ul>
     <!-- business news -->
@@ -57,5 +59,4 @@
 
     
 </body>
-
-</html>
+{%endblock%}
