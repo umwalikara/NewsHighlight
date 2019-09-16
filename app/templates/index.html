@@ -15,50 +15,55 @@
     <!-- general news section  -->
     <div class="row">
         <div class="col-md-12">
-    <h3 style="text-align: center"> General news</h3>
-    <ul>
-        {% for general_news in general %}
-        <li><h2 >Name:{{ general_news.name}}</h2></li>
-        <li >Id:{{ general_news.id}}</li>
-        <li>Description:{{ general_news.description}}</li>
-        <!-- <li><a href="{{ general_news.url}}">url</a></li> -->
-        <li>Category:{{ general_news.category}}</li>
-        <li>Language:{{ general_news.language}}</li>
-        <li>Country:{{ general_news.country}}</li>
-        <li><a href="/articles/{{general_news.id}}">View Articles</a></li>
-        {% endfor %}
-    </ul>
-    <!-- business news -->
-    <!-- <h3> Business news</h3>
+            <div class="jumbotron">
+                <h1 style="text-align: center">Welcome to the News Highlight</h1>
+            </div>
+            <h3 style="text-align: center"> <strong>General news</strong> </h3>
+            <ul>
+                {% for general_news in general %}
+                <li>
+                    <h2>Name:{{ general_news.name}}</h2>
+                </li>
+                <li>Id:{{ general_news.id}}</li>
+                <li>Description:{{ general_news.description}}</li>
+                <!-- <li><a href="{{ general_news.url}}">url</a></li> -->
+                <li>Category:{{ general_news.category}}</li>
+                <li>Language:{{ general_news.language}}</li>
+                <li>Country:{{ general_news.country}}</li>
+                <li><a href="/articles/{{general_news.id}}">View Articles</a></li>
+                {% endfor %}
+            </ul>
+            <!-- business news -->
+            <!-- <h3> Business news</h3>
     <ul>
         {% for business_news in business %}
         <li>{{ business_news.name}}</li>
         {% endfor %}
     </ul> -->
-    <!-- sports news -->
-    <!-- <h3>Sports news</h3>
+            <!-- sports news -->
+            <!-- <h3>Sports news</h3>
     <ul>
         {% for sports_news in sports %}
         <li>{{ sports_news.name}}</li>
         {% endfor %}
     </ul> -->
 
-    <!-- Entertainment news  -->
-    <!-- <h3> Entertainment news </h3>
+            <!-- Entertainment news  -->
+            <!-- <h3> Entertainment news </h3>
     <ul>
         {% for entertainment_news in entertainment %}
         <li>{{ entertainment_news.name}}</li>
         {% endfor %}
     </ul> -->
-    <!-- Technology news -->
-    <!-- <h3>Technology news</h3>
+            <!-- Technology news -->
+            <!-- <h3>Technology news</h3>
     <ul>
         {% for technology_news in technology %}
         <li>{{ technology_news.name}}</li>
         {% endfor %}
     </ul> -->
-</div>
-</div>
-    
+        </div>
+    </div>
+
 </body>
 {%endblock%}
